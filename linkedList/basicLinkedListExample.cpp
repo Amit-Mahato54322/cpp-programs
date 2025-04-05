@@ -27,16 +27,17 @@ int main(){
     second->next = third;
 
     third->data = 30;
-    third->next = NULL;
+    third->next = nullptr;
 
     // traverse each node to print the values 
     Node * temp = head;
-    while (temp!=NULL){
+    while (temp!=nullptr){
         cout << temp->data << " -> ";
         temp = temp->next;
     }
-    cout << "NULL";
-    
+    cout << "nullptr";
+    // free up the memories because we have dynamically allocated them. 
+    temp = head;
 
     return 0;
 }
