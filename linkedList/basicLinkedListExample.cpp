@@ -36,8 +36,14 @@ int main(){
         temp = temp->next;
     }
     cout << "nullptr";
+
     // free up the memories because we have dynamically allocated them. 
     temp = head;
+    while (temp != nullptr){
+        Node * nextNode = temp->next;   //store next node
+        delete temp;            // delete the current node
+        temp = nextNode;        // move to next
+    }
 
     return 0;
 }
